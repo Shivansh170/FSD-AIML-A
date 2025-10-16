@@ -1,0 +1,19 @@
+.card {
+  color: red;
+  background-color: gold;
+  border: 2px solid green;
+  width: 400px;
+  height: 400px;
+  padding: 2%;
+}
+
+.card img {
+  width: 250px;
+  height: 200px;
+}
+
+.book-list {
+  justify-content: space-evenly;
+  display: flex;
+}
+/*# sourceMappingURL=REACT-APP.aa436662.css.map */
