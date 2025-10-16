@@ -1,6 +1,7 @@
 import "./styles.css";
 import ReactDOM from "react-dom/client";
 import React from "react";
+import Book from "./Book";
 const images = [
   {
     title: "Book 1",
@@ -41,12 +42,7 @@ function App() {
   return (
     <div className="book-list">
       {images.map((book, index) => (
-        <div key={index} className="card">
-          <img src={book.imageURL} alt="book_image" />
-          <h3>Title:{book.title}</h3>
-          <h4>Price:₹{book.price}</h4>
-          <button>Add to Cart</button>
-        </div>
+        <Book imageURL={book.imageURL} title={book.title} price={book.price} />
       ))}
     </div>
   );
