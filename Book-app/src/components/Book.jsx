@@ -1,9 +1,5 @@
 import React from "react";
 
-// BookCard component
-// Props: { title, imageURL, price }
-// TailwindCSS is used for styling.
-
 export default function Book({ title, imageURL, price }) {
   const formattedPrice =
     typeof price === "number"
@@ -23,12 +19,10 @@ export default function Book({ title, imageURL, price }) {
           loading="lazy"
         />
 
-        {/* Price badge */}
         <div className="absolute top-3 right-3 bg-white/85 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold shadow">
           {formattedPrice}
         </div>
 
-        {/* Quick action (accessible) */}
         <button
           aria-label={`Add ${title} to wishlist`}
           className="absolute top-3 left-3 rounded-full p-2 bg-white/80 shadow-sm hover:scale-105 active:scale-95 transition-transform"
@@ -74,7 +68,6 @@ export default function Book({ title, imageURL, price }) {
           </div>
         </div>
 
-        {/* Meta area */}
         <div className="mt-3 text-xs text-gray-500">
           Free delivery • 3-5 business days
         </div>
