@@ -728,6 +728,8 @@ var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _book = require("./Book");
+var _bookDefault = parcelHelpers.interopDefault(_book);
 const images = [
     {
         title: "Book 1",
@@ -760,53 +762,18 @@ const images = [
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "book-list",
-        children: images.map((book, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "card",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: book.imageURL,
-                        alt: "book_image"
-                    }, void 0, false, {
-                        fileName: "index.jsx",
-                        lineNumber: 45,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        children: [
-                            "Title:",
-                            book.title
-                        ]
-                    }, void 0, true, {
-                        fileName: "index.jsx",
-                        lineNumber: 46,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        children: [
-                            "Price:\u20B9",
-                            book.price
-                        ]
-                    }, void 0, true, {
-                        fileName: "index.jsx",
-                        lineNumber: 47,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        children: "Add to Cart"
-                    }, void 0, false, {
-                        fileName: "index.jsx",
-                        lineNumber: 48,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, index, true, {
+        children: images.map((book, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bookDefault.default), {
+                imageURL: book.imageURL,
+                title: book.title,
+                price: book.price
+            }, void 0, false, {
                 fileName: "index.jsx",
-                lineNumber: 44,
+                lineNumber: 45,
                 columnNumber: 9
             }, this))
     }, void 0, false, {
         fileName: "index.jsx",
-        lineNumber: 42,
+        lineNumber: 43,
         columnNumber: 5
     }, this);
 }
@@ -821,7 +788,7 @@ $RefreshReg$(_c, "App");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","./styles.css":"7N9bM","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./styles.css":"7N9bM","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U","./Book":"1r82H"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -19783,6 +19750,75 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["fgT0v","aiwHB"], "aiwHB", "parcelRequireb35c", {}, null, null, "http://localhost:1234")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"1r82H":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$f269 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$f269.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f269.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Book);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Book({ imageURL, title, price }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "card",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: imageURL,
+                    alt: "book_image"
+                }, void 0, false, {
+                    fileName: "Book.jsx",
+                    lineNumber: 5,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                    children: [
+                        "Title:",
+                        title
+                    ]
+                }, void 0, true, {
+                    fileName: "Book.jsx",
+                    lineNumber: 6,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    children: [
+                        "Price:\u20B9",
+                        price
+                    ]
+                }, void 0, true, {
+                    fileName: "Book.jsx",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    children: "Add to Cart"
+                }, void 0, false, {
+                    fileName: "Book.jsx",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "Book.jsx",
+            lineNumber: 4,
+            columnNumber: 7
+        }, this)
+    }, void 0, false);
+}
+_c = Book;
+var _c;
+$RefreshReg$(_c, "Book");
+
+  $parcel$ReactRefreshHelpers$f269.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["fgT0v","aiwHB"], "aiwHB", "parcelRequireb35c", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=REACT-APP.2002cba6.js.map
