@@ -1,0 +1,7 @@
+.nav_button:hover {
+  color: black;
+  background-color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: larger;
+}
