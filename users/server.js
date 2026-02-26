@@ -47,32 +47,23 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === "PUT" && req.url.startsWith("/users/")) {
     const user_id = parseInt(req.url.split("/")[2]);
-
     const required_user = users.find((user) => user.id === user_id);
-
     if (!required_user) {
       return writeData(res, 404, "No such user found");
     }
-
     let body = "";
-
     req.on("data", (chunk) => {
       body += chunk.toString();
     });
-
     req.on("end", () => {
       let data;
-
       try {
         data = JSON.parse(body);
       } catch (err) {
         return writeData(res, 400, "Invalid JSON");
       }
-
-      // ✅ Update fields (only if provided)
       if (data.name) required_user.name = data.name;
       if (data.email) required_user.email = data.email;
-
       writeData(res, 200, required_user);
     });
   }
